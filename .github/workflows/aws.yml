@@ -36,6 +36,7 @@ jobs:
           ECR_REGISTRY: "003472343294.dkr.ecr.us-east-1.amazonaws.com/app_repo"
           ECR_REPOSITORY: "app_repo"
           IMAGE_TAG: latest
+        timeout-minutes: 10 
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
