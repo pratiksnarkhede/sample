@@ -40,7 +40,7 @@ jobs:
           IMAGE_TAG: ${{ steps.tag-number.outputs.tag }}
         timeout-minutes: 10 
         run: |
-          docker build --file ./path/to/Dockerfile -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker build --file ./Dockerfile -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
 
