@@ -1,8 +1,14 @@
-FROM node:19.6
+# Use an official Apache web server image as the base image
+FROM httpd:2.4
 
-WORKDIR /app
+# Set the working directory inside the container
+WORKDIR /usr/local/apache2/htdocs
 
-COPY package*.json ./
-RUN npm install
-COPY .. ./
-CMD node index.js
+# Copy the contents of your current directory into the container at the working directory
+COPY . .
+
+# Expose port 80 to allow incoming web requests
+EXPOSE 80
+
+# Start the Apache web server when the container is run
+CMD ["httpd-foreground"]
