@@ -1,11 +1,11 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:003472343294:task-definition/my_ecs_task",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:003472343294:task-definition/app",
     "containerDefinitions": [
         {
-            "name": "nginx",
+            "name": "app",
             "image": "003472343294.dkr.ecr.us-east-1.amazonaws.com/app_repo",
             "cpu": 256,
-            "memoryReservation": 512,
+            "memory": 512,
             "portMappings": [
                 {
                     "containerPort": 80,
@@ -19,7 +19,7 @@
             "volumesFrom": []
         }
     ],
-    "family": "my_ecs_task",
+    "family": "app",
     "taskRoleArn": "arn:aws:iam::003472343294:role/ecs_task_execution_role",
     "executionRoleArn": "arn:aws:iam::003472343294:role/ecs_task_execution_role",
     "networkMode": "awsvpc",
@@ -28,9 +28,6 @@
     "requiresAttributes": [
         {
             "name": "com.amazonaws.ecs.capability.ecr-auth"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
         },
         {
             "name": "com.amazonaws.ecs.capability.task-iam-role"
@@ -55,7 +52,7 @@
     ],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": "2023-12-21T04:54:31.314Z",
+    "registeredAt": "2023-12-21T07:41:46.349Z",
     "registeredBy": "arn:aws:iam::003472343294:user/Terraform",
     "tags": []
 }
