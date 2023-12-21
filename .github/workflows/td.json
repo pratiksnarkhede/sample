@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "app",
-            "image": "003472343294.dkr.ecr.us-east-1.amazonaws.com/app_repo",
+            "image": "003472343294.dkr.ecr.us-east-1.amazonaws.com/app_repo:main",
             "cpu": 256,
             "memory": 512,
             "portMappings": [
@@ -52,7 +52,7 @@
     ],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": "2023-12-21T07:41:46.349Z",
+    "registeredAt": "2023-12-21T08:41:18.727Z",
     "registeredBy": "arn:aws:iam::003472343294:user/Terraform",
     "tags": []
 }
