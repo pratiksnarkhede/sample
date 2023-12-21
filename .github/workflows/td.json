@@ -55,7 +55,7 @@
     ],
     "cpu": "256",
     "memory": "512",
-    "registeredAt": "2023-12-20T17:17:43.784Z",
+    "registeredAt": "2023-12-21T04:54:31.314Z",
     "registeredBy": "arn:aws:iam::003472343294:user/Terraform",
     "tags": []
 }
