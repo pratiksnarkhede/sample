@@ -9,8 +9,8 @@ on:
 env:
   AWS_REGION: us-east-1                
   ECR_REPOSITORY: app_repo
-  ECS_SERVICE: my-ecs-service            
-  ECS_CLUSTER: ecs_cluster              
+  ECS_SERVICE: app_service            
+  ECS_CLUSTER: app_cluster              
   ECS_TASK_DEFINITION: .github/workflows/td.json
   CONTAINER_NAME: app
   
@@ -61,7 +61,7 @@ jobs:
           echo "::set-output name=image::${ECR_REGISTRY}/${ECR_REPOSITORY}:${IMAGE_TAG}"
 
       - name: Fill in the new image ID in the Amazon ECS task definition
-        id: task-def
+        id: task-def-1
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
           task-definition: ${{ env.ECS_TASK_DEFINITION }}
