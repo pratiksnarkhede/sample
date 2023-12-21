@@ -8,7 +8,7 @@ on:
 
 env:
   AWS_REGION: us-east-1                
-  ECR_REPOSITORY: demo      
+  ECR_REPOSITORY: nginx    
   ECS_SERVICE: my-ecs-service            
   ECS_CLUSTER: ecs_cluster              
   ECS_TASK_DEFINITION: .github/workflows/td.json
